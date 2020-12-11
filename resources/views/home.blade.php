@@ -82,6 +82,9 @@ function pingAddress(string $endereco)
     
     <link rel="stylesheet" href="css/tipso.css">
 
+    <!-- scripts for the font -->
+    <script src="https://kit.fontawesome.com/06714c4939.js" crossorigin="anonymous"></script>
+
     <!-- Custom styles for this template-->
     <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
 
@@ -189,8 +192,8 @@ function pingAddress(string $endereco)
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">PUC MINAS</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                <!-- <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg"> -->
                             </a>
                             <!-- Dropdown - User Information -->
                             <!-- <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

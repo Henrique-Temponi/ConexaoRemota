@@ -77,13 +77,13 @@ function pingAddress(string $endereco)
     <title>Máquinas</title>
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="{{ asset('css/') }}" rel="stylesheet" type="text/css"> -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     
     <link rel="stylesheet" href="css/tipso.css">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
 
 </head>
 
@@ -125,7 +125,7 @@ function pingAddress(string $endereco)
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-building"></i>
+                    <i class="fas fa-building"></i>
                     <span>FCA</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -437,22 +437,22 @@ function pingAddress(string $endereco)
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="resouces/js/jquery.min.js"></script>
-    <script src="resouces/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="resouces/js/jquery.easing.min.js"></script>
+    <script src="{{ asset('js/jquery.easing.min.js') }}"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="resouces/js/sb-admin-2.min.js"></script>
+    <script src="{{ asset('js/sb-admin-2.min.js') }}"></script>
 
     <!-- Page level plugins -->
-    <script src="resouces/js/Chart.min.js"></script>
+    <!-- <script src="resouces/js/Chart.min.js"></script> -->
 
     <!-- Page level custom scripts -->
-    <script src="resouces/js/chart-area-demo.js"></script>
+    <!-- <script src="resouces/js/chart-area-demo.js"></script>
     <script src="resouces/js/chart-pie-demo.js"></script>
-    <script src="resouces/js/tipso.js"></script>
+    <script src="resouces/js/tipso.js"></script> -->
 
     <script>
         $('.card').tipso({
@@ -470,9 +470,9 @@ function pingAddress(string $endereco)
                 $(document.body).html(data);
             });
         }
-        $(function () {
-            setTimeout(startRefresh, 5000);
-        });
+        // $(function () {
+        //     setTimeout(startRefresh, 5000);
+        // });
     </script>
 
         <?php 

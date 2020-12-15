@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Maquina;
 
 class machineController extends Controller
 {
@@ -67,6 +68,11 @@ class machineController extends Controller
         }
 
         return $resposta;
+    }
+
+    public function exemplo(){
+        Maquina::maquinas;
+        return;
     }
 
 }

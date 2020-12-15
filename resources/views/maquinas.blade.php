@@ -197,4 +197,8 @@
 </div>
 <!-- end logout modal -->
 
+<!-- 
+    ajax -> chamar uma rota automaticamente de 5s em 5s pra função de pingar todas as maquinas 
+-->
+
 @endsection

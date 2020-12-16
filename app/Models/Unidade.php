@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Laboratorio extends Model
+class Unidade extends Model
 {
     use HasFactory;
 
@@ -15,11 +15,7 @@ class Laboratorio extends Model
      * @var array
      */
     protected $fillable = [
-        'id', 'nome',
-    ];
-
-    protected $guarded = [
-        'id_unidade'
+        'nome'
     ];
 
     protected $primaryKey = [
@@ -33,23 +29,11 @@ class Laboratorio extends Model
     [
         [
             'id' => '01',
-            'nome' => 'Lab01',
-            'id_unidade' => '01',            
+            'nome' => 'Coração Eucarístico',                       
         ],
         [
             'id' => '02',
-            'nome' => 'Lab02',
-            'id_unidade' => '01',
-        ],
-        [
-            'id' => '03',
-            'nome' => 'Lab03',
-            'id_unidade' => '01',
-        ],
-        [
-            'id' => '04',
-            'nome' => 'Lab04',
-            'id_unidade' => '01',
+            'nome' => 'São Gabriel',                       
         ],
     ];
 }

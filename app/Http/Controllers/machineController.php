@@ -7,7 +7,7 @@ use App\Models\Maquina;
 
 class machineController extends Controller
 {
-    function pingAddress(string $endereco)
+    public static function pingarEndereço(string $endereco)
     {
         $resposta = false;
 
@@ -70,9 +70,20 @@ class machineController extends Controller
         return $resposta;
     }
 
-    public function exemplo(){
-        Maquina::maquinas;
-        return;
+    public function pingarTodasAsMaquinas()
+    {
+        $maquinas = Maquina::all();        
+
+        $respostaTodasMaquinas = array();
+
+        foreach ($maquinas as $maquina)
+        {
+            $endereço = $maquina->ip;
+            // cria um par no arranjo onde a chave é o id da máquina e o dado é a própria máquina.
+            array_push($respostaTodasMaquinas, static::pingarEndereço($endereço));
+        }
+
+        return $respostaTodasMaquinas;
     }
 
 }

@@ -75,4 +75,11 @@ class machineController extends Controller
         return;
     }
 
+
+    public function testComAjax(Request $request)
+    {
+        $sum = $request->primeiro + $request->segundo;
+
+        return $sum;
+    }
 }

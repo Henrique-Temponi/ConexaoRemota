@@ -148,7 +148,7 @@
                     <div id="maq2" class="card mb-2 py-1">
                         <div class="card-body">
                             <a class="dropdown-item text-center" href="#" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-fw fa-desktop" style="padding-right: 2em;"></i>Máquina 2</a>
-
+                            <h4 id="testAjax">nice</h4>
                         </div>
                     </div>
 
@@ -197,8 +197,30 @@
 </div>
 <!-- end logout modal -->
 
+
 <!-- 
     ajax -> chamar uma rota automaticamente de 5s em 5s pra função de pingar todas as maquinas 
 -->
 
+<script>
+
+    function testAjax(){
+        $.ajax({
+            url: "/",
+            data: { 'primeiro': 1, 'segundo': 2 }
+        })
+        .done(function(data) {
+            $('#testAjax').replaceWith(data.responseText);
+            console.log(this.responseText);
+            console.log("ok");
+        })
+        .fail(function(){
+            console.log(this.responseText);
+            console.log("nok");
+        });
+    }
+
+    setTimeout(testAjax, 5000);
+
+</script>
 @endsection

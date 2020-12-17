@@ -136,7 +136,7 @@
             <div class="row">
 
                 <!-- Border Bottom Utilities -->
-                <div class="col-md-auto">
+                <div class="col-md-auto-sm d-flex flex-row">
 
                     @foreach($maquinas as $maquina)
                         <div id="maq1" class="card mb-2 py-1 border-bottom-primary">

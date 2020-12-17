@@ -45,6 +45,24 @@ class Maquina extends Model
             'ip_lab' => '01',
             'disponivel' => false
         ],
+        [
+            'nome' => 'PMG34INFLB20105',
+            'ip' => '127.0.0.5',
+            'ip_lab' => '01',
+            'disponivel' => false
+        ],
+        [
+            'nome' => 'PMG34INFLB20105',
+            'ip' => '127.0.0.5',
+            'ip_lab' => '01',
+            'disponivel' => false
+        ],
+        [
+            'nome' => 'PMG34INFLB20106',
+            'ip' => '127.0.0.6',
+            'ip_lab' => '01',
+            'disponivel' => false
+        ],
     ];
     
 }

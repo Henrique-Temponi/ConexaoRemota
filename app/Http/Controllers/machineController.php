@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Maquina;
 
-class machineController extends Controller
+class MachineController extends Controller
 {
     public static function pingarEndereço(string $endereco)
     {
@@ -70,20 +70,19 @@ class machineController extends Controller
         return $resposta;
     }
 
-    public function pingarTodasAsMaquinas()
+    public static function pingarTodasAsMaquinas()
     {
-        $maquinas = Maquina::all();        
-
-        $respostaTodasMaquinas = array();
+        $maquinas = Maquina::maquinas;
 
         foreach ($maquinas as $maquina)
         {
-            $endereço = $maquina->ip;
+            $endereço = $maquina["ip"];
             // cria um par no arranjo onde a chave é o id da máquina e o dado é a própria máquina.
-            array_push($respostaTodasMaquinas, static::pingarEndereço($endereço));
+            $maquina["disponivel"] = static::pingarEndereço($endereço);
         }
 
-        return $respostaTodasMaquinas;
+        return view('maquinas')
+            ->with(compact('maquinas'));
     }
 
 }

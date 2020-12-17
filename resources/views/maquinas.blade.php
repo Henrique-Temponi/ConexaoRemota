@@ -136,30 +136,27 @@
             <div class="row">
 
                 <!-- Border Bottom Utilities -->
-                <div class="col-lg-2">
+                <div class="col-md-auto">
 
-                    <div id="maq1" class="card mb-2 py-1 border-bottom-primary">
-                        <div class="card-body">
-                            <a class="dropdown-item text-center" href="#" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-fw fa-desktop" style="padding-right: 2em;"></i>Máquina 1</a>
-                            <h4 class="text-center"><span class="badge badge-danger">Indisponível</span></h4>
+                    @foreach($maquinas as $maquina)
+                        <div id="maq1" class="card mb-2 py-1 border-bottom-primary">
+                            <div class="card-body">
+                                <a class="dropdown-item text-center" href="#" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-fw fa-desktop" ></i>  {{ $maquina["nome"] }}</a>
+                                @if(!$maquina["disponivel"])
+                                    <h4 class="text-center"><span class="badge badge-danger">Indisponível</span></h4>
+                                @endif
+                            </div>
                         </div>
-                    </div>
-
-                    <div id="maq2" class="card mb-2 py-1">
-                        <div class="card-body">
-                            <a class="dropdown-item text-center" href="#" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-fw fa-desktop" style="padding-right: 2em;"></i>Máquina 2</a>
-
-                        </div>
-                    </div>
+                    @endforeach
 
                 </div>
                 <!-- </div> -->
 
             </div>
 
-
         </div>
         <!-- /.container-fluid -->
+        
 
     </div>
     <!-- End of Main Content -->

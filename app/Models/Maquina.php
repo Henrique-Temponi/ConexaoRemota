@@ -10,7 +10,7 @@ class Maquina extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nome', 'ip',
+        'nome', 'ip', 'dispoinvel'
     ];    
     protected $guarded = [
         'id_lab'
@@ -25,21 +25,25 @@ class Maquina extends Model
             'nome' => 'PMG34INFLB20101',
             'ip' => '127.0.0.1',
             'ip_lab' => '01',
+            'disponivel' => false
         ],
         [
             'nome' => 'PMG34INFLB20102',
             'ip' => '127.0.0.2',
             'ip_lab' => '01',
+            'disponivel' => false
         ],
         [
             'nome' => 'PMG34INFLB20103',
             'ip' => '127.0.0.3',
             'ip_lab' => '01',
+            'disponivel' => false
         ],
         [
             'nome' => 'PMG34INFLB20104',
             'ip' => '127.0.0.4',
             'ip_lab' => '01',
+            'disponivel' => false
         ],
     ];
     

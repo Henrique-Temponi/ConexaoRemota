@@ -14,11 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('maquinas');
-});
-
 Route::get(
-    '/atualizar',
+    '/',
     [machineController::class, 'testComAjax']
-)->name('atualizar');
+)->name('home');
+

@@ -207,7 +207,8 @@
     function testAjax(){
         $.ajax({
             url: "/",
-            data: { 'primeiro': 1, 'segundo': 2 }
+            dataType: "json",
+            data: { tipo:"dado" },
         })
         .done(function(data) {
             $('#testAjax').replaceWith(data.responseText);

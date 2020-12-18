@@ -78,8 +78,11 @@ class machineController extends Controller
 
     public function testComAjax(Request $request)
     {
-        $sum = $request->primeiro + $request->segundo;
+        // $sum = $request->primeiro + $request->segundo;
+        // dd($request);
+        // print($_REQUEST);
+        // print($request);
 
-        return $sum;
+        return view('maquinas');
     }
 }

@@ -19,7 +19,7 @@ class Maquina extends Model
     /**
      * Usuários para teste.
      */
-    public const maquinas =
+    public static $maquinas =
     [
         [
             'nome' => 'PMG34INFLB20101',

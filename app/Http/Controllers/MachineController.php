@@ -24,7 +24,7 @@ class MachineController extends Controller
 
         $dati_mount = explode(",", $cmd); // split por vírgula ,
 
-        //  echo print_r($dati_mount);
+        //echo print_r($dati_mount);
 
         $out = null;
 
@@ -76,9 +76,9 @@ class MachineController extends Controller
 
     public static function pingarTodasAsMaquinas()
     {
-        $maquinas = Maquina::maquinas;
+        $maquinas = Maquina::$maquinas;
 
-        foreach ($maquinas as $maquina)
+        foreach ($maquinas as &$maquina)
         {
             $endereço = $maquina["ip"];
             // cria um par no arranjo onde a chave é o id da máquina e o dado é a própria máquina.

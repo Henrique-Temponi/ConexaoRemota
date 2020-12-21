@@ -30,6 +30,9 @@ class MachineController extends Controller
 
         if (sizeof($dati_mount) > 1){ // Caso haja mais de uma string no split, a máquina existe
 
+            $resposta = true;
+
+            /*
             if (preg_match("/1/", $dati_mount[1], $out))
             {
 
@@ -60,7 +63,8 @@ class MachineController extends Controller
                     //echo "NÃO TEM NINGUEM LOGADO";
                     echo "Disponível";
                 }
-            }
+            }*/
+
         }
         else{
             $resposta = null;

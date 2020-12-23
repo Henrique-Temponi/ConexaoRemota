@@ -133,26 +133,26 @@
             <p class="mb-4">Máquinas do laboratório LAB-1</p>
 
             <!-- Content Row -->
-            <div class="row">
+            
 
-                <!-- Border Bottom Utilities -->
-                <div class="col-md-auto-sm d-flex flex-row">
+            <!-- Border Bottom Utilities -->
+            <div id="maquinas" class="col-md-auto-sm d-flex flex-row">
 
-                    @foreach($maquinas as $maquina)
-                        <div id="maq1" class="card mb-2 py-1 border-bottom-primary">
-                            <div class="card-body">
-                                <a class="dropdown-item text-center" href="#" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-fw fa-desktop" ></i>  {{ $maquina["nome"] }}</a>
-                                @if(!$maquina["disponivel"])
-                                    <h4 class="text-center"><span class="badge badge-danger">Indisponível</span></h4>
-                                @endif
-                            </div>
+                @foreach($maquinas as $maquina)
+                    <div id="maq1" class="col-md-3 card mb-2 py-1 border-bottom-primary">
+                        <div class="card-body">
+                            <a class="dropdown-item text-center" href="#" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-fw fa-desktop" ></i>  {{ $maquina["nome"] }}</a>
+                            @if(!$maquina["disponivel"])
+                                <h4 class="text-center"><span class="badge badge-danger">Indisponível</span></h4>
+                            @endif
                         </div>
-                    @endforeach
-
-                </div>
-                <!-- </div> -->
+                    </div>
+                @endforeach
 
             </div>
+            <!-- </div> -->
+
+            
 
         </div>
         <!-- /.container-fluid -->

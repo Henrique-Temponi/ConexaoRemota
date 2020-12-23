@@ -14,4 +14,9 @@ use App\Http\Controllers\MachineController;
 |
 */
 
-Route::get('/', [MachineController::class, 'pingarTodasAsMaquinas'])->name('pingar');
+Route::get('/', [MachineController::class, 'listarMaquinas'])->name('listar.maquinas');
+// Route::get('/', function(){
+//     return view('layouts.home');
+// });
+
+Route::get('/pingar', [MachineController::class, 'pingarTodasAsMaquinas'])->name('pingar');

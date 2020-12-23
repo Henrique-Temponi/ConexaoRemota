@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Laboratorio extends Model
+class Instituto extends Model
 {
-    use HasFactory;
+    use HasFactory;    
 
     /**
      * The attributes that are mass assignable.
@@ -19,7 +19,7 @@ class Laboratorio extends Model
     ];
 
     protected $guarded = [
-        'id_instituto'
+        'id_unidade'
     ];
 
     protected $primaryKey = [
@@ -33,23 +33,18 @@ class Laboratorio extends Model
     [
         [
             'id' => '01',
-            'nome' => 'Lab01',
-            'id_instituto' => '01',            
+            'nome' => 'ICEI',
+            'id_unidade' => '01',            
         ],
         [
             'id' => '02',
-            'nome' => 'Lab02',
-            'id_instituto' => '01',
+            'nome' => 'FCA',
+            'id_unidade' => '01',
         ],
         [
             'id' => '03',
-            'nome' => 'Lab03',
-            'id_instituto' => '01',
-        ],
-        [
-            'id' => '04',
-            'nome' => 'Lab04',
-            'id_instituto' => '01',
+            'nome' => 'ICEG',
+            'id_unidade' => '01',
         ],
     ];
 }

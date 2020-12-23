@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Maquina;
+use Illuminate\Http\Request;
 
 class MachineController extends Controller
 {
@@ -74,8 +74,15 @@ class MachineController extends Controller
         return $resposta;
     }
 
+    public static function listarMaquinas(){
+        $maquinas = Maquina::$maquinas;
+
+        return view('maquinas')
+            ->with(compact('maquinas'));
+    }
+
     public static function pingarTodasAsMaquinas()
-    {
+    {           
         $maquinas = Maquina::$maquinas;
 
         foreach ($maquinas as &$maquina)
@@ -85,8 +92,7 @@ class MachineController extends Controller
             $maquina["disponivel"] = static::pingarEndereço($endereço);
         }
 
-        return view('maquinas')
-            ->with(compact('maquinas'));
+        return $maquinas;
     }
 
 }

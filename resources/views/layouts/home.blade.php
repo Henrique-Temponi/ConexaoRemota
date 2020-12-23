@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <!-- <meta name="csrf-token" content="{{ csrf_token() }}"> -->
 
     <title>Máquinas</title>
 
@@ -57,14 +58,27 @@
     </script>
 
     <script>
-        function startRefresh() {
-            $.get('', function (data) {
-                $(document.body).html(data);
-            });
-        }
+        // function startRefresh() {
+        //     $.get('', function (data) {
+        //         $(document.body).html(data);
+        //     });
+        // }
         // $(function () {
         //     setTimeout(startRefresh, 5000);
         // });
+        
+        setInterval(function(){ 
+            $.ajax({
+                type: "GET",
+                url: "http://localhost/ConexaoRemota/public/pingar",
+                data: "",
+                success: function(maquinas) {
+                    console.log(maquinas);
+                    $("#maquinas").html(maquinas);
+                }
+            })    
+        }, 5000);
+
     </script>
     
 </body>

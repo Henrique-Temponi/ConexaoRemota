@@ -11,8 +11,8 @@ class MachineController extends Controller
     {
         $resposta = false;
 
-        //$cmd = shell_exec("ping -c 1 -w 1 $endereco");
-        $cmd = shell_exec("ping /n 1 $endereco");
+        $cmd = shell_exec("ping -c 1 -w 1 $endereco");
+        // $cmd = shell_exec("ping /n 1 $endereco");
 
         /*
         * Saída do comando ping quando a máquina existe:

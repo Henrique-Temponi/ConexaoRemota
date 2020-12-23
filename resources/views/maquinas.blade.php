@@ -139,7 +139,7 @@
             <div id="maquinas" class="col-md-auto-sm d-flex flex-row">
 
                 @foreach($maquinas as $maquina)
-                    <div id="maq1" class="col-md-3 card mb-2 py-1 border-bottom-primary">
+                    <div id="{{ $maquina['nome'] }}" class="col-md-3 card mb-2 py-1 border-bottom-primary">
                         <div class="card-body">
                             <a class="dropdown-item text-center" href="#" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-fw fa-desktop" ></i>  {{ $maquina["nome"] }}</a>
                             @if(!$maquina["disponivel"])

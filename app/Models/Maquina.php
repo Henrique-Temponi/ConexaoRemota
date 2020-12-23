@@ -23,19 +23,19 @@ class Maquina extends Model
     [
         [
             'nome' => 'PMG34INFLB20101',
-            'ip' => 'globo.com',
+            'ip' => 'google.com',
             'ip_lab' => '01',
             'disponivel' => false
         ],
         [
             'nome' => 'PMG34INFLB20102',
-            'ip' => '127.0.0.2',
+            'ip' => 'asasd',
             'ip_lab' => '01',
             'disponivel' => false
         ],
         [
             'nome' => 'PMG34INFLB20103',
-            'ip' => '127.0.0.3',
+            'ip' => 'google.com',
             'ip_lab' => '01',
             'disponivel' => false
         ],

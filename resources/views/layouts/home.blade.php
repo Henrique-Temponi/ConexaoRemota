@@ -70,11 +70,24 @@
         setInterval(function(){ 
             $.ajax({
                 type: "GET",
-                url: "http://localhost/ConexaoRemota/public/pingar",
+                url: "{{ route('pingar') }}",
                 data: "",
                 success: function(maquinas) {
-                    console.log(maquinas);
-                    $("#maquinas").html(maquinas);
+                    console.log("#" + maquinas[0]["nome"] + ">div>h4");
+                    // $("#" + maquinas["nome"] + ">div>h4").html("ok");
+
+                    resultado = "";
+                    maquinas.forEach(maquina => {
+                        if (maquina["disponivel"]) {
+                            resultado = '<h4 class="text-center"><span class="badge badge-success">disponível</span></h4>';
+                            console.log(maquina["nome"] + "ok");
+                        }
+                        else {
+                            resultado = '<h4 class="text-center"><span class="badge badge-danger">Indisponível</span></h4>';
+                            console.log(maquina["nome"] + "not ok");
+                        }
+                        $("#" + maquina["nome"] + ">div>h4").html(resultado);
+                    });
                 }
             })    
         }, 5000);
